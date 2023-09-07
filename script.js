@@ -1,3 +1,7 @@
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissor = document.getElementById("scissor");
+
 // Get computer's choice
 const getComputerChoice = function () {
   const choices = ["rock", "paper", "scissors"];
@@ -50,6 +54,7 @@ function playRound(playerSelection, computerSelection) {
 // console.log(playRound(playerSelection, getComputerChoice()));
 
 const game = function () {
+  let playerSelection;
   for (let i = 0; i < 5; i++) {
     let playerSelection = prompt(
       "Enter your choice between Rock, Paper and Scissors"
