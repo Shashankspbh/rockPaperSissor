@@ -97,7 +97,7 @@ const reset = function () {
 };
 
 const checkWinner = function (playerScore, computerScore) {
-  console.log(playerScore);
+  // console.log(playerScore);
   if (rounds === 5) {
     if (playerScore > computerScore)
       gameResult.textContent = `You won! ${playerScore} vs ${computerScore}`;
@@ -105,28 +105,22 @@ const checkWinner = function (playerScore, computerScore) {
       gameResult.textContent = `Computer won! ${computerScore} vs ${playerScore}`;
     else gameResult.textContent = "It's a draw";
     resetButton.style.visibility = "visible";
-    console.log(rock);
-    rock.setAttribute("disabled", "disabled");
-    paper.setAttribute("disabled", "disabled");
-    scissor.setAttribute("disabled", "disabled");
+    rock.removeEventListener("click", clickEvent);
+    paper.removeEventListener("click", clickEvent);
+    scissor.removeEventListener("click", clickEvent);
   }
 };
 
-rock.addEventListener("click", function () {
+function clickEvent(e) {
+  // console.log(this.id);
   rounds += 1;
-  game("rock");
+  game(this.id);
   checkWinner(playerScore, computerScore);
-});
-paper.addEventListener("click", function () {
-  rounds += 1;
-  game("paper");
-  checkWinner(playerScore, computerScore);
-});
-scissor.addEventListener("click", function () {
-  rounds += 1;
-  game("scissors");
-  checkWinner(playerScore, computerScore);
-});
+}
+
+rock.addEventListener("click", clickEvent);
+paper.addEventListener("click", clickEvent);
+scissor.addEventListener("click", clickEvent);
 
 resetButton.addEventListener("click", function () {
   reset();

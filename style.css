@@ -1,12 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h3,
 h4 {
   text-align: center;
 }
-
+body {
+  display: flex;
+  flex-direction: column;
+  /* margin: auto; */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* background-image: URL(./images/background-2.jpg);
+  background-size: cover; */
+  background-color: rgb(67, 122, 134);
+}
 .score {
   display: flex;
   justify-content: space-around;
+  /* margin: auto; */
+  /* min-width: 100vh; */
 }
 .scores {
   display: flex;
@@ -16,6 +32,9 @@ h4 {
 .selection {
   display: flex;
   justify-content: center;
+  margin-top: auto;
+  gap: 10%;
+  /* margin: 100px; */
 }
 .button {
   margin: 10px;
@@ -27,4 +46,10 @@ h4 {
 .reset-area {
   display: flex;
   justify-content: center;
+}
+
+.play-buttons {
+  width: 100px;
+
+  /* margin: auto; */
 }
