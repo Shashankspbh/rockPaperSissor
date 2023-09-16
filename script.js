@@ -11,7 +11,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 const getComputerChoice = function () {
-  const choices = ["rock", "paper", "scissors"];
+  const choices = ["rock", "paper", "scissor"];
   return choices[Math.floor(Math.random() * 3)];
 };
 
@@ -23,7 +23,7 @@ function playRound(playerSelection, computerSelection) {
     roundResult.textContent = "You Lose! Paper beats Rock";
   } else if (
     playerSelection.toLowerCase() == "rock" &&
-    computerSelection == "scissors"
+    computerSelection == "scissor"
   ) {
     playerScore += 1;
     roundResult.textContent = "You Win! Rock beats Scissors";
@@ -35,18 +35,18 @@ function playRound(playerSelection, computerSelection) {
     roundResult.textContent = "You Win! Paper beats Rock";
   } else if (
     playerSelection.toLowerCase() == "paper" &&
-    computerSelection == "scissors"
+    computerSelection == "scissor"
   ) {
     computerScore += 1;
     roundResult.textContent = "You Lose! Scissors beats Paper";
   } else if (
-    playerSelection.toLowerCase() == "scissors" &&
+    playerSelection.toLowerCase() == "scissor" &&
     computerSelection == "paper"
   ) {
     playerScore += 1;
     roundResult.textContent = "You Win! Scissors beats Paper";
   } else if (
-    playerSelection.toLowerCase() == "scissors" &&
+    playerSelection.toLowerCase() == "scissor" &&
     computerSelection == "rock"
   ) {
     computerScore += 1;
@@ -96,6 +96,7 @@ const checkWinner = function (playerScore, computerScore) {
 function clickEvent(e) {
   // console.log(this.id);
   rounds += 1;
+  console.log(this.id);
   game(this.id);
   checkWinner(playerScore, computerScore);
 }
