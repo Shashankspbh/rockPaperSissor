@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "burger";
+  src: url(./CheeseBurger.otf);
+}
 
 h1,
 h3,
@@ -16,7 +20,10 @@ body {
   padding: 0;
   /* background-image: URL(./images/background-2.jpg);
   background-size: cover; */
-  background-color: rgb(67, 122, 134);
+  background-color: grey;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-content: center;
+  color: rgb(249, 243, 243);
 }
 .score {
   display: flex;
@@ -29,13 +36,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.selection {
-  display: flex;
-  justify-content: center;
-  margin-top: auto;
-  gap: 10%;
-  /* margin: 100px; */
-}
+
 .button {
   margin: 10px;
 }
@@ -47,9 +48,31 @@ body {
   display: flex;
   justify-content: center;
 }
-
+.result-container {
+  /* margin-top: auto; */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 50vh; */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.5rem;
+}
+.selection {
+  display: flex;
+  justify-content: center;
+  /* margin-top: auto; */
+  gap: 10%;
+  background-color: rgb(73, 71, 71);
+  /* margin: 100px; */
+}
 .play-buttons {
-  width: 100px;
-
+  max-width: 120px;
+  width: 20%;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  /* transition: transform 0.2s ease; */
   /* margin: auto; */
 }

@@ -52,7 +52,7 @@ function playRound(playerSelection, computerSelection) {
     computerScore += 1;
     roundResult.textContent = "You Lose! Rock beats Scissors";
   } else {
-    roundResult.textContent = "It's a draw";
+    roundResult.textContent = `It's a tie! Both chose ${playerSelection}`;
   }
 }
 
@@ -90,9 +90,9 @@ const reset = function () {
   roundResult.textContent = "";
   userScore.textContent = 0;
   compScore.textContent = 0;
-  rock.removeAttribute("disabled");
-  paper.removeAttribute("disabled");
-  scissor.removeAttribute("disabled");
+  rock.addEventListener("click", clickEvent);
+  paper.addEventListener("click", clickEvent);
+  scissor.addEventListener("click", clickEvent);
   resetButton.style.visibility = "hidden";
 };
 

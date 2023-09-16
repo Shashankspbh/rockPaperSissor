@@ -19,33 +19,42 @@
         <div class="computer-score">0</div>
       </div>
     </div>
+    <div class="result-container">
+      <div class="reset-area">
+        <button
+          class="button"
+          id="reset"
+          type="button"
+          style="visibility: hidden"
+        >
+          Play Again
+        </button>
+      </div>
+      <div class="game-result"></div>
+      <div class="round-result"></div>
+    </div>
+
     <div class="selection">
-      <img src="./images/rock.png" class="play-buttons" id="rock" alt="rock" />
       <img
-        src="./images/paper.png"
+        src="./images/rock-png.png"
+        class="play-buttons"
+        id="rock"
+        alt="rock"
+      />
+      <img
+        src="./images/paper-png.png"
         class="play-buttons"
         id="paper"
         alt="paper"
       />
       <img
-        src="./images/scissor.png"
+        src="./images/scissor-png.png"
         class="play-buttons"
         id="scissor"
         alt="scissor"
       />
     </div>
-    <div class="round-result"></div>
-    <div class="game-result"></div>
-    <div class="reset-area">
-      <button
-        class="button"
-        id="reset"
-        type="button"
-        style="visibility: hidden"
-      >
-        Play Again
-      </button>
-    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
