@@ -56,24 +56,6 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-// console.log(playRound(playerSelection, getComputerChoice()));
-/*
-const game = function () {
-  let playerSelection;
-  for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt(
-      "Enter your choice between Rock, Paper and Scissors"
-    );
-    console.log(playRound(playerSelection, getComputerChoice()));
-  }
-  if (playerScore > computerScore)
-    console.log(`Player won! ${playerScore} vs ${computerScore}`);
-  else if (computerScore > playerScore)
-    console.log(`Computer won! ${computerScore} vs ${playerScore}`);
-  else console.log("It's a draw");
-};
-*/
-
 const game = function (selection) {
   playRound(selection, getComputerChoice());
   userScore.textContent = playerScore;
@@ -125,5 +107,3 @@ scissor.addEventListener("click", clickEvent);
 resetButton.addEventListener("click", function () {
   reset();
 });
-
-//this is a test comment to test git branch -rps-ui
